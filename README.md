@@ -11,4 +11,4 @@ git clone https://github.com/prasithtoughboy/terraform_for_GKE_microservices.git
 5. terraform plan
 6. terraform apply
 
-The resource starts creating and if you go to your GCP GKE console, under service you will see frontend and frontend2. Click the link. Your application will be running.
+The resource starts creating and if you go to your GCP GKE console, under service you will see frontend-external. Click the link. Your application will be running as microservice
