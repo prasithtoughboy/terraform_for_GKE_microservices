@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        TF_VAR_project     = 'VVDN-CICD'
+        TF_VAR_project     = 'Project_name_gcp'
         TF_VAR_region = 'us-east1'
         TF_VAR_user      = 'admin'
         TF_VAR_password  = 'm8XBWrg2zt8R8JoH'
@@ -25,7 +25,7 @@ pipeline {
                 script {
                     currentBuild.displayName = "${version}"
                 }
-                sh 'wget http://192.168.106.183:8081/artifactory/generic-local-test/gcloud-sa.json'
+                sh 'wget http://artifactory_server:8081/artifactory/generic-local-test/gcloud-sa.json'
                 sh 'pwd'
                 sh 'terraform init'
                 sh "terraform plan"
